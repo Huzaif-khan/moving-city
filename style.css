@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./assets/bg.jpg.jpeg);
+    background-position: bottom left;
+    animation: bgMovement 5s linear infinite;
+
+}
+
+#car {
+    height: 180px;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 500px;
+    animation: carMovement 3s ease-in 4s forwards;
+}
+
+#car img {
+    width: 100%;
+    height: 100%;
+}
+
+#bike {
+    height: 120px;
+    width: 140px;
+    position: absolute;
+    bottom: 0;
+    left: 1000px;
+    animation: bikeMovement 3s ease-in 7s forwards;
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+    transition: all 0.5s ease-in-out;
+}
+
+#bike :hover {
+    transform: rotate(-75deg);
+}
+
+
+
+#bike img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes bgMovement {
+    0% {
+        background-position: bottom left;
+    }
+
+    100% {
+        background-position: bottom right;
+    }
+
+}
+
+@keyframes carMovement {
+    0% {
+        left: 500px;
+    }
+
+    100% {
+        left: 1500px;
+    }
+
+}
+
+@keyframes bikeMovement {
+    0% {
+        left: 1000px;
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+     60% {
+        transform: rotate(-75deg);
+    }
+
+    80% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        left: 2000px;
+    }
+
+}
